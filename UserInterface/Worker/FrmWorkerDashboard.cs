@@ -180,27 +180,6 @@ namespace UserInterface.Worker
             Application.Exit();
         }
 
-        private void cmbJobs_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (start)
-            {
-                return;
-            }
-
-            int jobId = CmbJobs.SelectedValue.ConInt();
-
-            for (int i = 0; i < DtgJobs.RowCount; i++)
-            {
-                if (DtgJobs.Rows[i].Cells["JobId"].Value.ConInt() == jobId)
-                {
-                    DtgJobs.Rows[i].Selected = true;
-                    TxtJobName.Text = DtgJobs.CurrentRow.Cells["JobName"].Value.ToString();
-                    RchJobContent.Text = DtgJobs.CurrentRow.Cells["JobContent"].Value.ToString();
-                    break;
-                }
-            }
-        }
-
         private void CmbJobs_SelectedValueChanged_1(object sender, EventArgs e)
         {
             if (start)
