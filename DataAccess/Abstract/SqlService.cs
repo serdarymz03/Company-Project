@@ -12,7 +12,7 @@ namespace DataAccess.Abstract
     {
         readonly string connectionString = "Server=LAPTOP-DT4V53M6; Database=DBKURUMSAL; Integrated Security=True;";
         SqlConnection connection;
-
+        string a;
         public SqlService()
         {
             connection = new SqlConnection();
