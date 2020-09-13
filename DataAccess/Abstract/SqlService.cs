@@ -12,7 +12,6 @@ namespace DataAccess.Abstract
     {
         readonly string connectionString = "Server=LAPTOP-DT4V53M6; Database=DBKURUMSAL; Integrated Security=True;";
         SqlConnection connection;
-
         public SqlService()
         {
             connection = new SqlConnection();
